@@ -1,46 +1,23 @@
-# ArduPLC NANO #
-## Mini PLC básico basado en Arduino ##
+# CNMB5_I2C
+## HMI I2C con pantalla OLED 1.3", 5 pulsadores y 3 leds
 
 ----------
-ArduPLC NANO es un mini PLC (programmable logic controller) basado en arquitectura Arduino. Está pensado y diseñado para usos en entornos industriales y domésticos.  Puedes programar fácilmente ArduPLC NANO en cualquier entorno de desarrollo para Arduino y compatibles. Asegurate que seleccionas como placa destino **Arduino MICRO**.
+Con el módulo opcional HMI (Human-Machine Interface) **CNMB5_I2C** podrás interactuar fácilmente con nuestros ArduPLCs. Puede mostrar o modificar fácilmente parámetros, tiempos, menús, calendario, mensajes de alarma, gráficos, etc.
 
-![ArduX1](https://github.com/raymirabel/ArduPLC_NANO/blob/master/doc/ArduPLC_NANO.png)
+![CNMB5_I2C](https://github.com/raymirabel/HMI/blob/master/CNMB5_I2C/Doc/HMI_CNMB_I2C_1.jpg)
+
 
 Lo más destacado:
 
-- Tamaño compacto.
-- Alimentación directa a 230VAC (versión AC) o 24VDC (versión DC).
-- Puerto USB MINI.
-- 4 relés.
-- 4 entradas digitales optoacopladas.
-- Conector auxiliar RJ12 para bus de expansión I2C.
+- Pantalla OLED 1.3" 128x64 pixel.
+- 5 pulsadores.
+- 3 leds.
+- Control completo de pantalla, leds y pulsadores mediante I2C.
+- Conector auxiliar RJ12 para BUS de expansión I2C.
 - RTC opcional.
-- Frontal HMI (pantalla OLED 1.3" y 4 botones) opcional.
+- Optimizado para encajar en nuestras cajas de carril DIN.
 
 
-Dispones de la librería **ArduPLC_NANO** para facilitar la programación.
+Para el uso de la pantalla OLED recomendamos la librería [u8glib](https://github.com/olikraus/u8glib "u8glib").
 
-## Funciones disponibles: ##
-
-	void relayWrite(uint8_t relay, bool status);	// Escribe estado de un relé
-	bool relayRead(uint8_t relay);					// Lee estado de un relé
-	void relayToggle(uint8_t relay);				// Alterna el estado de un relé
-	bool digitalRead(uint8_t din);					// Lee el estado de una entrada digital
-
-
-## Palabras clave:     
-
-	#define ON
-	#define OFF
-	#define RELAY1  
-	#define RELAY2  
-	#define RELAY3  
-	#define RELAY4  
-	#define DIN1    
-	#define DIN2    
-	#define DIN3    
-	#define DIN4    
-	#define BUTTON_UP
-	#define BUTTON_DOWN
-	#define BUTTON_LEFT
-	#define BUTTON_RIGHT
+Para el uso del expansor E/S recomendamos la librería [pcf8574](https://github.com/skywodd/pcf8574_arduino_library "PCF8574").
