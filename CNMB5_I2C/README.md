@@ -16,6 +16,7 @@ Lo más destacado:
 - Conector auxiliar RJ12 para BUS de expansión I2C.
 - RTC opcional.
 - Optimizado para encajar en nuestras cajas de carril DIN.
+- Ideal para incorporar a ArduPLC MICRO y ArduPLC V2.
 
 
 Para el uso de la pantalla OLED recomendamos la librería [u8glib](https://github.com/olikraus/u8glib "u8glib").
